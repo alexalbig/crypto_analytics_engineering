@@ -44,9 +44,9 @@ resource "google_compute_instance" "vm_instance" {
       "git clone https://github.com/aayomide/crypto_analytics_engineering.git",
       "sudo apt-get install wget",
       "wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh",
-      "bash Anaconda3-2022.10-Linux-x86_64.sh -b -p /home/aayomide/anaconda3",
+      "bash Anaconda3-2022.10-Linux-x86_64.sh -b -p /home/${var.gce_ssh_user}/anaconda3",
       "rm Anaconda3-2022.10-Linux-x86_64.sh",
-      "export PATH=/home/aayomide/anaconda3/bin:$PATH"
+      "echo 'export PATH=/home/${var.gce_ssh_user}/anaconda3/bin:$PATH' >> ~/.bashrc"
     ]
   }
 }
