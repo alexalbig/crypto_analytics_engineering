@@ -2,7 +2,7 @@ version: 2
 
 sources:
     - name: staging
-      database: crypto-analytics-2404  # GCP project id
+      database: crypto-analytics-project  # GCP project id
       schema: stg_coins_dataset        # BigQuery dataset name
       
       tables:

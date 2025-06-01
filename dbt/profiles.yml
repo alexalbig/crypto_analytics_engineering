@@ -6,6 +6,7 @@ coins-db:
     dev:
       type: bigquery
       method: oauth
-      project: crypto-analytics-2404  #GCP_PROJECT_ID, adjust accordingly
+      project: crypto-analytics-project  #GCP_PROJECT_ID, adjust accordingly
       dataset: "schema" # DBT_DATASET_NAME,  You can also use "schema" here
       threads: 4 # Must be a value of 1 or greater 
+      location: europe-west6 # Adjust to your preferred location
